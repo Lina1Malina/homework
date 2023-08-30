@@ -45,5 +45,6 @@ void Average(int[,] arr)
             sum += arr[i, j];
         }
         Console.WriteLine($"Среднее арифметическое %{i} равно {sum/arr.GetLength(1)}");
+        sum = 0;
     }
 }
