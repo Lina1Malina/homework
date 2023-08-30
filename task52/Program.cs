@@ -38,13 +38,13 @@ void PrintArray(int[,] arr)
 void Average(int[,] arr)
 {
     double sum = 0;
-    for (int i = 0; i < arr.GetLength(0); i++)
+    for (int i = 0; i < arr.GetLength(1); i++)
     {
-        for (int j = 0; j < arr.GetLength(1); j++)
+        for (int j = 0; j < arr.GetLength(0); j++)
         {
-            sum += arr[i, j];
+            sum += arr[j, i];
         }
-        Console.WriteLine($"Среднее арифметическое %{i} равно {sum/arr.GetLength(1)}");
+        Console.WriteLine($"Среднее арифметическое {i} равно {sum/arr.GetLength(0)}");
         sum = 0;
     }
 }
